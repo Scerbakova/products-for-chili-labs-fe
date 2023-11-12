@@ -7,7 +7,7 @@ interface PaginationProps {
 
 const Pagination = ({ onPreviousClick, previousButtonDisabled, onNextClick, nextButtonDisabled }: PaginationProps) => {
   
-  const buttonClass = "bg-lime-900 text-white rounded p-2 m-2 w-32 disabled:bg-gray-700 disabled:cursor-not-allowed";
+  const buttonClass = "bg-teal-900 text-white rounded p-2 m-2 w-32 hover:bg-teal-700 transition disabled:bg-gray-700 disabled:cursor-not-allowed";
 
 	return (
 		<div className="flex flex-row justify-center m-6">
