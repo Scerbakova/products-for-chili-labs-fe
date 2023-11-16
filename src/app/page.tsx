@@ -1,17 +1,17 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Product } from './models/product';
+import { InputSearch } from './components/InputSearch';
+import { Pagination } from './components/Pagination';
+import { ProductCard } from './components/ProductCard';
+import { Spinner } from './components/Spinner';
 import getProducts from './libs/getProducts';
-import { navigateToPreviousPage } from './libs/navigateToPreviousPage';
 import { navigateToNextPage } from './libs/navigateToNextPage';
-import InputSearch from './components/inputSearch';
-import Pagination from './components/pagination';
-import ProductCard from './components/productCard';
-import Spinner from './components/spinner';
+import { navigateToPreviousPage } from './libs/navigateToPreviousPage';
+import { Product } from './models/product';
 
 const productsAmountOnPage = 10;
 
-export default function Home() {
+const Home = () => {
     const [initialProducts, setInitialProducts] = useState<Product[]>([]);
     const [products, setProducts] = useState<Product[]>([]);
     const [startFromProduct, setStartFromProduct] = useState(0);
@@ -102,3 +102,4 @@ export default function Home() {
         </div>
     );
 }
+export default Home;

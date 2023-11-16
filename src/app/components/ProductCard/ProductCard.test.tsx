@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
-import ProductCard from './productCard';
+import ProductCard from './ProductCard';
 
 const testProduct = {
     id: 1,

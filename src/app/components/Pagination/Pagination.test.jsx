@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import Pagination from './pagination';
+import Pagination from './Pagination';
 
 const user = userEvent.setup();
 

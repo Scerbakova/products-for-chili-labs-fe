@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Product } from "../models/product";
+import { Product } from "../../models/product";
 
 interface ProductCardProps {
 	product: Product;
 }
 
-export default function ProductCard({product}: Readonly<ProductCardProps> ) {
+const ProductCard = ({product}: Readonly<ProductCardProps> ) => {
 	return (
 		<div className="border p-4 bg-gradient-to-r from-slate-800 to-teal-800 rounded border-none">
 		<h2 className="text-lg font-semibold mb-2">{product.name}</h2>
@@ -21,3 +21,5 @@ export default function ProductCard({product}: Readonly<ProductCardProps> ) {
 	</div>
 	)
 }
+
+export default ProductCard;

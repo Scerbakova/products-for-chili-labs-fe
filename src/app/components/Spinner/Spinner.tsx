@@ -1,4 +1,4 @@
-export default function Spinner() {
+const Spinner = () => {
     return (
         <div data-testid="spinner">
             <svg
@@ -21,3 +21,5 @@ export default function Spinner() {
         </div>
     );
 }
+
+export default Spinner;

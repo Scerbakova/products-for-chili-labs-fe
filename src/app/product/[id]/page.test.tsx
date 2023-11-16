@@ -45,4 +45,19 @@ describe('Product Component', () => {
             }
         });
     });
+
+    it('displays loading spinner initially and hides after product is loaded', async () => {
+        const getProductMock = require('@/app/libs/getProduct').default;
+        getProductMock.mockResolvedValue(singleProductMock);
+        const params = { id: '1' };
+        render(<Product params={params} />);
+
+        const loadingSpinner = screen.getByTestId('spinner');
+        expect(loadingSpinner).toBeInTheDocument();
+
+        await screen.findByText(singleProductMock.name);
+        const productElement = screen.getByText(singleProductMock.name);
+        expect(productElement).toBeInTheDocument();
+        expect(loadingSpinner).not.toBeInTheDocument();
+    });
 });
